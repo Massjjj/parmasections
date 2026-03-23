@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>sezpage</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Residenti delle sezioni di censimento per età, sesso, quartiere e nazionalità</h1>
+        </header>
+        <main>
+            <section id="age-section">
+                <div id="age-range-label">
+                    <label>Intervallo d'età: 0-120</label>
+                </div>
+                <div id="move-thumbs">--- muovi i pomelli ---</div>
+                <div id="age-range-slider">
+                    <input type="range" id="age-min" min="0" max="120" value="0">
+                    <input type="range" id="age-max" min="0" max="120" value="120">
+                    <div id="slider-track"></div>
+                </div>
+            </section>
+            <section id="sex-section">
+                <div id="sexes">
+                    <button id="sex-males">Maschi</button>
+                    <button id="sex-females">Femmine</button>
+                </div>                                
+            </section>
+            <section id="central-section">
+                <div id="quartieri">
+                    <button id="quartieri-select-all">Seleziona tutti</button>
+                    <button id="quartieri-deselect-all">Deseleziona tutti</button>
+                </div> 
+                <div id="map"></div>
+                <div id="areas-buttons">
+                    <button id="countries-select-all">Seleziona tutti i Paesi</button>
+                    <button id="countries-deselect-all">Deseleziona tutti i Paesi</button>
+                    <button id="ex-italy">Non Italia</button>
+                </div>                
+            </section>
+            <section id="subvariables">
+                <button id="absolute">Residenti</button>
+                <button id="percentage">Percentuale sui residenti totali delle sezioni selezionate</button>
+            </section>
+            <section id="output-section">
+                <div id="output">
+                    <output id="selection-value"></output>
+                </div>                
+            </section>
+        </main>
+    </body>
+    <footer>
+        <!--footer-->
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/arquero@5.4.0"></script>
+    <script src="application.js"></script>
+</html>
